@@ -17,16 +17,14 @@ email= "umputun@gmail.com"
 [params]
 author = "Umputun"
 description = "заметки на разные темы"
-gravatar = "umputun@gmail.com"
-
+authorimage = "/images/p-240.png"
 copyright = "umputun"
 license = "CC BY-SA 4.0"
-licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
 postNavigation = false
 
-themeColor="theme-base-08"
+themeColor="theme-base-00"
 Remark42=true
-
 dateformat="2006-02-01"
 
 [permalinks]
@@ -34,10 +32,10 @@ posts = "/:year/:month/:day/:filename"
 
 [menu]
 
-  [[menu.main]]
-  name = " Кто я такой"
-  identifier = "about"
-  url = "/about/"
+#   [[menu.main]]
+#   name = " Кто я такой"
+#   identifier = "about"
+#   url = "/about/"
 
   [[menu.main]]
   name = "Еженедельный подкаст от Umputun"
@@ -48,6 +46,11 @@ posts = "/:year/:month/:day/:filename"
   name = "Подкаст Радио-Т"
   identifier = "podcast_radiot"
   url = "https://radio-t.com/"
+
+  [[menu.main]]
+  name = "Помочь на patreon"
+  identifier = "patreon"
+  url = "https://www.patreon.com/user?u=2577215"
 
 [taxonomies]
   tag = "tags"
