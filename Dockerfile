@@ -1,4 +1,4 @@
-FROM umputun/baseimage:v1.4.1
+FROM umputun/baseimage:app-v1.4.1
 
 ENV HUGO_VER=0.73.0
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VER}/hugo_${HUGO_VER}_Linux-64bit.tar.gz /tmp/hugo.tar.gz
