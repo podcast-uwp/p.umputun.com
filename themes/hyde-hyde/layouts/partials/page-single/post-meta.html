@@ -18,8 +18,8 @@
           {{ range $i, $tag := . }}
           <a class="badge badge-tag" href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">&nbsp;{{ $tag | lower }}</a>
           {{ if lt $i $subtotal }} {{ end }}
+          {{ end }}
         </div>
-      {{ end }}
     {{ end }}
   {{ end }}
 </div>
