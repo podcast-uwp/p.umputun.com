@@ -1,4 +1,6 @@
-p.umputun.com - hugo, скрипты для создания и доставки [![Build Status](https://github.com/podcast-uwp/p.umputun.com/workflows/build/badge.svg)](https://github.com/podcast-uwp/p.umputun.com/actions)
+p.umputun.com [![Build Status](https://github.com/podcast-uwp/p.umputun.com/workflows/build/badge.svg)](https://github.com/podcast-uwp/p.umputun.com/actions)
+
+hugo, скрипты для создания и обновления 
 
 ## генерация сайта
 
