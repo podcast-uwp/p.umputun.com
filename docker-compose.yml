@@ -1,8 +1,10 @@
 version: "2.4"
 services:
   hugo:
-    image: p.umputun.com
     build: .
+    image: hugo_p
+    container_name: hugo_p
+    hostname: hugo_p
     logging: &default_logging
       driver: json-file
       options:
@@ -16,7 +18,8 @@ services:
   updater:
     build: updater
     hostname: updater
-    container_name: updater
+    image: updater_p
+    container_name: updater_p
     restart: always
     logging: *default_logging
     volumes:
