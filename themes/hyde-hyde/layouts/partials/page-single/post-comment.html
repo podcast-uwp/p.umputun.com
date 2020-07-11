@@ -1,0 +1,13 @@
+{{ if ne .Params.showcomments false }}
+    {{ if .Site.DisqusShortname }}
+        {{ partial "page-single/comment/disqus.html" . }}
+    {{ else if .Site.Params.GraphCommentId }}
+        {{ partial "page-single/comment/graphcomment.html" . }}
+    {{ else if .Site.Params.UtterancesRepo }}
+        {{ partial "page-single/comment/utterances.html" . }}
+    {{ else if .Site.Params.Commento }}
+        {{ partial "page-single/comment/commento.html" . }}
+    {{ else if .Site.Params.Remark42 }}
+        {{ partial "page-single/comment/remark42.html" . }}
+    {{ end }}
+{{ end }}

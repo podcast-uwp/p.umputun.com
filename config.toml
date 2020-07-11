@@ -1,0 +1,66 @@
+baseURL = "https://p.umputun.com/"
+languageCode = "ru-ru"
+title = "Umputun тут был"
+theme = "hyde-hyde"
+
+summarylength = 40
+enableEmoji = true
+paginate = 25
+
+[params.social]
+gravatar = "umputun@gmail.com"
+github = "umputun"
+twitter = "umputun"
+telegram = "umputun"
+email= "umputun@gmail.com"
+
+[params]
+author = "Umputun"
+description = "заметки на разные темы"
+gravatar = "umputun@gmail.com"
+
+copyright = "umputun"
+license = "CC BY-SA 4.0"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+postNavigation = false
+
+themeColor="theme-base-08"
+Remark42=true
+
+dateformat="2006-02-01"
+
+[permalinks]
+posts = "/:year/:month/:day/:filename"
+
+[menu]
+
+  [[menu.main]]
+  name = " Кто я такой"
+  identifier = "about"
+  url = "/about/"
+
+  [[menu.main]]
+  name = "Еженедельный подкаст от Umputun"
+  identifier = "podcast_umputun"
+  url = "https://podcast.umputun.com/"
+
+  [[menu.main]]
+  name = "Подкаст Радио-Т"
+  identifier = "podcast_radiot"
+  url = "https://radio-t.com/"
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true # if false, you need to provide you own custom CSS
+  style = "monokai"
+  tabWidth = 4  

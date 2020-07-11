@@ -1,0 +1,24 @@
+version: "2.4"
+services:
+  hugo:
+    image: p.umputun.com
+    build: .
+    logging: &default_logging
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    environment:
+      HUGO_ENV: production
+    volumes:
+      - .:/srv/hugo
+
+  updater:
+    build: updater
+    hostname: updater
+    container_name: updater
+    restart: always
+    logging: *default_logging
+    volumes:
+      - /home/umputun/.ssh/id_rsa.pub:/home/app/.ssh/id_rsa.pub
+      - /home/umputun/.ssh/id_rsa:/home/app/.ssh/id_rsa
