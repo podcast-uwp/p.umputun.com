@@ -4,6 +4,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 {{ partial "footer/font-awesome-js.html" . }}
+{{ partial "footer/remark42.html" . }}
 {{ partial "highlight-js.html" . }}
 {{ with .Site.Params.toc }}
 {{ if and (eq . "tocbot") (ne $include_toc false) }}
@@ -23,17 +24,3 @@
 </script>
 {{ end }}
 {{ end }}
-
- <script>
-  var remark_config = {
-    site_id: 'p.umputun.com',
-    locale: 'ru',
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    var baseurl = 'https://remark42.umputun.com';
-    s.src = baseurl + '/web/embed.js';
-    s.type = 'text/javascript';
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
