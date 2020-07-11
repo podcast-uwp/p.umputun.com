@@ -2,7 +2,8 @@
 a.badge-category {
   color: #fff !important;
   background-color: #0088cc;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: #0088cc !important;
     background: transparent;
     background-color: transparent;
@@ -13,9 +14,12 @@ a.badge-category {
 
 .badge-tag,
 a.badge-tag {
+  margin-left: 0.4em;
+  align-self: start;
   color: #fff !important;
   background-color: #7766cc;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: #7766cc !important;
     background: transparent;
     background-color: transparent;
