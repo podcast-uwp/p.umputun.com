@@ -12,6 +12,7 @@ services:
         max-file: "5"
     environment:
       HUGO_ENV: production
+      APP_UID: 1000
     volumes:
       - .:/srv/hugo
 
