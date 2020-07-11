@@ -32,10 +32,10 @@ posts = "/:year/:month/:day/:filename"
 
 [menu]
 
-#   [[menu.main]]
-#   name = " Кто я такой"
-#   identifier = "about"
-#   url = "/about/"
+  [[menu.main]]
+  name = " Домой"
+  identifier = "home"
+  url = "/"
 
   [[menu.main]]
   name = "Еженедельный подкаст от Umputun"
