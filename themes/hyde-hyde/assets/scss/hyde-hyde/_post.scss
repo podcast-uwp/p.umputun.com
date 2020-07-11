@@ -4,6 +4,14 @@
   font-weight: $meta-font-weight;
 }
 
+.post__meta-tag {
+  display: inline-block;
+}
+
+.post__meta-tag + .post__meta-tag {
+  margin-left: 0.8em;
+}
+
 .post__category {
   font-weight: bold;
 }
@@ -18,16 +26,36 @@
 }
 
 .post__title {
-  background-image: -webkit-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For Chrome and Safari */
-  background-image:    -moz-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Fx (3.6 to 15) */
-  background-image:     -ms-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For pre-releases of IE 10*/
-  background-image:      -o-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Opera (11.1 to 12.0) */
-  background-image:         linear-gradient(to right, $gradient-color-1, $gradient-color-2); /* Standard syntax; must be last */
-  color:transparent;
+  background-image: -webkit-linear-gradient(
+    left,
+    $gradient-color-1,
+    $gradient-color-2
+  ); /* For Chrome and Safari */
+  background-image: -moz-linear-gradient(
+    left,
+    $gradient-color-1,
+    $gradient-color-2
+  ); /* For old Fx (3.6 to 15) */
+  background-image: -ms-linear-gradient(
+    left,
+    $gradient-color-1,
+    $gradient-color-2
+  ); /* For pre-releases of IE 10*/
+  background-image: -o-linear-gradient(
+    left,
+    $gradient-color-1,
+    $gradient-color-2
+  ); /* For old Opera (11.1 to 12.0) */
+  background-image: linear-gradient(
+    to right,
+    $gradient-color-1,
+    $gradient-color-2
+  ); /* Standard syntax; must be last */
+  color: transparent;
   -webkit-background-clip: text;
-  background-clip: text; 
- }
- 
+  background-clip: text;
+}
+
 .post__subtitle {
   display: block;
   font-size: $post__subtitle-font-size;

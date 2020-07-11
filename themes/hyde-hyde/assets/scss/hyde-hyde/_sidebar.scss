@@ -1,4 +1,5 @@
 .sidebar {
+  display: flex;
   background-color: $sidebar-color;
   color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.5);
@@ -26,6 +27,16 @@
     display: block;
     margin-top: 4px;
   }
+}
+
+.sidebar .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar .copyright {
+  margin-top: auto;
 }
 
 .sidebar-nav {
@@ -67,6 +78,7 @@
   text-align: center;
 
   a {
+    margin: 0 0.2 em;
     padding: 0 4px;
     @include link-no-decoration();
   }
@@ -97,6 +109,6 @@
 }
 
 .builtwith {
-  padding-top: .2rem;
+  padding-top: 0.2rem;
   @extend %small-center-text;
 }
