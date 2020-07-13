@@ -1,6 +1,6 @@
 {{ partial "header/styles-highlight.html" . }}
 
-{{ $options := (dict "outputStyle" "compressed") }}
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" false) }}
 
 {{ $style := resources.Get "scss/hyde-hyde.scss" | toCSS $options | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
