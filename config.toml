@@ -7,7 +7,7 @@ summarylength = 40
 enableEmoji = true
 paginate = 25
 
-GoogleAnalytics = UA-20349923-1
+GoogleAnalytics = "UA-20349923-1"
 
 [params.social]
 gravatar = "umputun@gmail.com"
