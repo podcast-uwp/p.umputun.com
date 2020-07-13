@@ -19,11 +19,13 @@ email= "umputun@gmail.com"
 [params]
 author = "Umputun"
 description = "заметки на разные темы"
+longDescription = "Заметки на разные темы от Umputun. Старший брат моего твиттера."
 authorimage = "/images/p-240.png"
 copyright = "umputun"
 license = "CC BY-SA 4.0"
 licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
 postNavigation = false
+keywords = "Umputun, Умпутун, blog umputun, блог умпутуна"
 
 themeColor="theme-base-00"
 Remark42=true
@@ -69,3 +71,6 @@ posts = "/:year/:month/:day/:filename"
   noClasses = true # if false, you need to provide you own custom CSS
   style = "monokai"
   tabWidth = 4  
+
+[author]
+  name = "umputun"
