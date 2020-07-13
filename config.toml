@@ -8,6 +8,7 @@ enableEmoji = true
 paginate = 25
 
 GoogleAnalytics = "UA-20349923-1"
+enableSourceMap = true
 
 [params.social]
 gravatar = "umputun@gmail.com"
