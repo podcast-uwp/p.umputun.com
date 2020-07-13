@@ -5,6 +5,6 @@ hugo, скрипты для создания и обновления
 ## генерация сайта
 
 ```
-docker-compose build hugo
-docker-compose run --rm hugo
+docker-compose build hugo_p
+docker-compose run --rm hugo_p
 ```

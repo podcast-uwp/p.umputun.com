@@ -1,6 +1,6 @@
 version: "2.4"
 services:
-  hugo:
+  hugo_p:
     build: .
     image: hugo_p
     container_name: hugo_p
