@@ -43,6 +43,19 @@
     {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
   {{ partial "footer/font-awesome-js.html" . }}
+  <script>
+    var remark_config = {
+      site_id: 'p.umputun.com',
+      locale: 'ru',
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      var baseurl = 'https://remark42.umputun.com';
+      s.src = baseurl + '/web/counter.js';
+      s.type = 'text/javascript';
+      (d.head || d.body).appendChild(s);
+    })();
+</script>
 {{ end }}
 
 
