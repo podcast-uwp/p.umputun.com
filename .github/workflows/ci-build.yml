@@ -15,3 +15,6 @@ jobs:
 
       - name: build docker image
         run: docker-compose build
+
+      - name: hugo generate
+        run: docker-compose run --rm hugo_p
