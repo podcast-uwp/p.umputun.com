@@ -1,5 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ .TranslationBaseName | replaceRE "^[0-9]{8}-" "" | replaceRE "-" " " | title }}"
+slug: {{ .TranslationBaseName | replaceRE "^[0-9]{8}-" ""  }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
 tags : [ "dev", "hugo", "hyde-hyde"]
