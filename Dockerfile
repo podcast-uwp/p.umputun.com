@@ -6,7 +6,7 @@ RUN cd tmp; \
     tar -xvf hugo.tar.gz && \
     ls -la && \
     mv /tmp/hugo /bin && \
-    rm -rf /tmp
+    rm -rf /tmp/*
 
 COPY exec.sh /srv/exec.sh
 CMD /bin/sh "/srv/exec.sh"
