@@ -20,7 +20,7 @@ RUN \
     echo "StrictHostKeyChecking=no" > /home/app/.ssh/config && \
     chown -R app:app /home/app/.ssh/ && \
     chmod 600 /home/app/.ssh/* && \
-    chmod 700 /home/app/.ssh &&
+    chmod 700 /home/app/.ssh && \
     rm -rf /var/cache/apk/*
 
 USER app
