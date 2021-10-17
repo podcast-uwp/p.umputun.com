@@ -15,10 +15,9 @@ RUN \
     mkdir -p /srv /home/$MYUSER /home/app/.ssh && \
     adduser -s /bin/sh -D -u $MYUID $MYUSER && chown -R $MYUSER:$MYUSER /home/$MYUSER && \
     delgroup ping && addgroup -g 998 ping && \
-    chown -R $MYUSER:$MYUSER /srv && \
+    chown -R $MYUSER:$MYUSER /srv /home/app/.ssh/ && \
     apk add --update openssh-client && \
     echo "StrictHostKeyChecking=no" > /home/app/.ssh/config && \
-    chown -R app:app /home/app/.ssh/ && \
     chmod 600 /home/app/.ssh/* && \
     chmod 700 /home/app/.ssh && \
     rm -rf /var/cache/apk/*
