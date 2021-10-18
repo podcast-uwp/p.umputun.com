@@ -16,8 +16,8 @@ RUN \
     adduser -s /bin/sh -D -u $MYUID $MYUSER && \
     delgroup ping && \
     addgroup -g 998 ping && \
-    chown -R $MYUSER:$MYUSER /srv /home/$MYUSER && \
     echo "StrictHostKeyChecking=no" > /home/$MYUSER/.ssh/config && \
+    chown -R $MYUSER:$MYUSER /srv /home/$MYUSER && \
     chmod 600 /home/$MYUSER/.ssh/* && \
     chmod 700 /home/$MYUSER/.ssh && \
     rm -rf /var/cache/apk/*
