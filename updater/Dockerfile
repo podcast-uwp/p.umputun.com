@@ -1,9 +1,7 @@
 FROM alpine:3.12
 
 ARG APP_UID=1000
-
-ENV TZ=America/Chicago \
-    TERM=xterm-color
+ENV TERM=xterm-color
 
 COPY updater.sh /srv/updater.sh
 COPY entrypoint.sh /srv/entrypoint.sh
