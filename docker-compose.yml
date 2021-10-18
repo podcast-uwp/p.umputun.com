@@ -11,6 +11,7 @@ services:
         max-size: "10m"
         max-file: "5"
     environment:
+      TZ: America/Chicago
       HUGO_ENVIRONMENT: production
       APP_UID: 1000
     volumes:
@@ -21,6 +22,10 @@ services:
     hostname: updater
     image: updater_p
     container_name: updater_p
+    environment:
+      TZ: America/Chicago
+    args:
+      APP_UID: 1000
     restart: always
     logging: *default_logging
     volumes:
