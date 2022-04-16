@@ -90,7 +90,7 @@ slug: how-echomsk-resurrected
 
 ## Что в результате
 
-В результате у нас есть [фид подкаста](http://feeds.feedburner.com/echomsk), [простая страница](https://feedmaster.umputun.com/feed/echo-msk) для ручного потребления и раздача нa [apple podcasts](https://podcasts.apple.com/us/podcast/эхо-москвы/id300172145). Еще есть [телеграмм канал](https://t.me/echomsk_u) куда feed-master загружает аудио файлы. Наверное, можно найти и в другиих местах, например на [castbox](https://castbox.fm/channel/Эхо-Москвы-id25918?country=us)
+В результате у нас есть [фид подкаста](https://feedmaster.umputun.com/rss/echo-msk), [простая страница](https://feedmaster.umputun.com/feed/echo-msk) для ручного потребления и раздача нa [apple podcasts](https://podcasts.apple.com/us/podcast/эхо-москвы/id300172145). Еще есть [телеграмм канал](https://t.me/echomsk_u) куда feed-master загружает аудио файлы. Наверное, можно найти и в другиих местах, например на [castbox](https://castbox.fm/channel/Эхо-Москвы-id25918?country=us)
 
 За первые 5 дней мы раздали аудио-файлы этого возрожденного подкаста больше миллиона раз (1.4М на момент написания этой заметки) и потратили (на доброе дело) более 50Т трафика.
 
