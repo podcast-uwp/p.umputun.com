@@ -56,6 +56,11 @@ posts = "/:year/:month/:day/:slug"
   url = "https://radio-t.com/"
 
   [[menu.main]]
+  name = "Канал на YouTube"
+  identifier = "youtube"
+  url = "https://www.youtube.com/c/UmputunU/videos"
+
+  [[menu.main]]
   name = "Помочь на patreon"
   identifier = "patreon"
   url = "https://www.patreon.com/user?u=2577215"
