@@ -14,7 +14,7 @@ gravatar = "umputun@gmail.com"
 github = "umputun"
 twitter = "umputun"
 telegram = "umputun"
-email= "umputun@gmail.com"
+email = "umputun@gmail.com"
 
 [params.meta]
 keywords = "Umputun, Умпутун, blog umputun, блог умпутуна"
@@ -31,55 +31,57 @@ license = "CC BY-SA 4.0"
 licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
 postNavigation = false
 
-themeColor="theme-base-00"
-Remark42=true
-dateformat="2006-02-01"
+themeColor = "theme-base-00"
+Remark42 = true
+dateformat = "2006-02-01"
 
 [permalinks]
 posts = "/:year/:month/:day/:slug"
 
 [menu]
 
-  [[menu.main]]
-  name = " Домой"
-  identifier = "home"
-  url = "/"
+[[menu.main]]
+name = " Домой"
+identifier = "home"
+url = "/"
 
-  [[menu.main]]
-  name = "Еженедельный подкаст от Umputun"
-  identifier = "podcast_umputun"
-  url = "https://podcast.umputun.com/"
+[[menu.main]]
+name = "Еженедельный подкаст от Umputun"
+identifier = "podcast_umputun"
+url = "https://podcast.umputun.com/"
 
-  [[menu.main]]
-  name = "Подкаст Радио-Т"
-  identifier = "podcast_radiot"
-  url = "https://radio-t.com/"
+[[menu.main]]
+name = "Подкаст Радио-Т"
+identifier = "podcast_radiot"
+url = "https://radio-t.com/"
 
-  [[menu.main]]
-  name = "Канал на YouTube"
-  identifier = "youtube"
-  url = "https://www.youtube.com/c/UmputunU/videos"
+[[menu.main]]
+name = "Канал на YouTube"
+identifier = "youtube"
+url = "https://www.youtube.com/c/UmputunU/videos"
 
-  [[menu.main]]
-  name = "Помочь на patreon"
-  identifier = "patreon"
-  url = "https://www.patreon.com/user?u=2577215"
+[[menu.main]]
+name = "Помочь на patreon"
+identifier = "patreon"
+url = "https://www.patreon.com/user?u=2577215"
 
 [taxonomies]
-  tag = "tags"
+tag = "tags"
 
 [markup]
 
-  [markup.highlight]
-  codeFences = true
-  guessSyntax = false
-  hl_Lines = ""
-  lineNoStart = 1
-  lineNos = false
-  lineNumbersInTable = true
-  noClasses = true # if false, you need to provide you own custom CSS
-  style = "monokai"
-  tabWidth = 4  
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true          # if false, you need to provide you own custom CSS
+style = "monokai"
+tabWidth = 4
+[markup.goldmark.renderer]
+unsafe = true
 
 [author]
-  name = "umputun"
+name = "umputun"
