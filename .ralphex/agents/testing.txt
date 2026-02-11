@@ -1,0 +1,41 @@
+Verify Hugo site build integrity and template correctness.
+
+Note: Hugo has no unit test framework. "Testing" means verifying the site builds correctly and all references resolve.
+
+## Build Verification
+
+1. Hugo build - does `hugo` complete without errors or warnings?
+2. Template rendering - are there any template execution errors in build output?
+3. Missing content - does Hugo report any missing referenced content?
+
+## Reference Integrity
+
+1. Partial references - every {{ partial "name" }} has a corresponding file in layouts/partials/ or theme partials
+2. Shortcode references - every shortcode used in content has a definition
+3. Layout references - content types have corresponding layout files
+4. Image paths - referenced images exist in static/images/ or page bundles
+5. Internal links - cross-references between pages use valid paths
+
+## Asset Integrity
+
+1. SCSS/CSS imports - all @import statements reference existing files
+2. JavaScript references - script tags point to existing files
+3. Font references - font files exist where referenced
+4. Icon references - icon files or icon font classes are valid
+
+## Content Consistency
+
+1. Frontmatter fields - required fields present in all content files
+2. Date formats - dates follow consistent format (YYYYMMDD in filenames)
+3. Taxonomy consistency - categories/tags used consistently
+4. Permalink structure - content organization matches permalink config
+
+## What to Report
+
+For each finding:
+- Location: file path and line number
+- Issue: what reference is broken or what's missing
+- Impact: what would break or render incorrectly
+- Fix: how to resolve the issue
+
+Report problems only - no positive observations.

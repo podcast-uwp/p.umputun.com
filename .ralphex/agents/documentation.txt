@@ -1,0 +1,51 @@
+Review code changes and identify missing documentation updates.
+
+## README.md (Human Documentation)
+
+Check if changes require README updates:
+
+Must document:
+- New features or site capabilities
+- New content types or taxonomies
+- Changed theme behavior or appearance
+- New configuration options
+- New build requirements or commands
+- Breaking changes to site structure
+
+Skip:
+- Content additions (new blog posts)
+- Minor style tweaks
+- Internal template refactoring with no user-visible changes
+
+## CLAUDE.md (AI Knowledge Base)
+
+Check if changes require CLAUDE.md updates:
+
+Must document:
+- New Hugo conventions or patterns established
+- Theme customization patterns
+- New build/deploy commands or workflows
+- Project structure changes
+- Hugo version compatibility notes
+- New shortcodes or partials with non-obvious behavior
+
+Skip:
+- Simple content additions
+- Minor template fixes
+- Style adjustments using existing patterns
+
+## Plan Files
+
+If changes relate to an existing plan:
+- Mark completed items as done
+- Update plan status if needed
+- Note which plan items this change addresses
+
+## What to Report
+
+For each gap:
+- Missing: what needs to be documented
+- Section: where in the documentation it should go
+- Suggested content: draft text or outline
+
+Report problems only - no positive observations.

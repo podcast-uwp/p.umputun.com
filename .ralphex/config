@@ -1,0 +1,55 @@
+# ralphex configuration for p.umputun.com (Hugo static site)
+#
+# precedence (highest to lowest): CLI flags > local config (.ralphex/) > global config (~/.config/ralphex/) > embedded defaults
+#
+# NOTE: inline comments (e.g., "key = value # comment") are NOT supported.
+
+# ------------------------------------------------------------------------------
+# claude executor
+# ------------------------------------------------------------------------------
+
+claude_command = claude
+claude_args = --dangerously-skip-permissions --output-format stream-json --verbose
+
+# ------------------------------------------------------------------------------
+# codex executor
+# ------------------------------------------------------------------------------
+
+codex_enabled = true
+codex_command = codex
+codex_model = gpt-5.3-codex
+codex_reasoning_effort = xhigh
+codex_timeout_ms = 3600000
+codex_sandbox = read-only
+
+# ------------------------------------------------------------------------------
+# external review
+# ------------------------------------------------------------------------------
+
+external_review_tool = codex
+
+# ------------------------------------------------------------------------------
+# finalize step
+# ------------------------------------------------------------------------------
+
+finalize_enabled = true
+
+# ------------------------------------------------------------------------------
+# timing
+# ------------------------------------------------------------------------------
+
+iteration_delay_ms = 2000
+task_retry_count = 1
+
+# ------------------------------------------------------------------------------
+# paths
+# ------------------------------------------------------------------------------
+
+plans_dir = docs/plans
+
+# ------------------------------------------------------------------------------
+# error pattern detection
+# ------------------------------------------------------------------------------
+
+claude_error_patterns = You've hit your limit,API Error:
+codex_error_patterns = Rate limit,quota exceeded

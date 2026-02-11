@@ -1,0 +1,26 @@
+Review whether the implementation achieves the stated goal/requirement.
+
+## Core Review Responsibilities
+
+1. Requirement coverage - does implementation address all aspects of the stated requirement? Are there edge cases or scenarios not handled?
+
+2. Correctness of approach - is the chosen approach actually solving the right problem? Could it fail in certain conditions (different browsers, screen sizes, content lengths)?
+
+3. Template wiring - are all templates, partials, and layouts connected properly? Are new partials included where needed? Are config values referenced correctly?
+
+4. Completeness - are there missing pieces that would prevent the feature from working? Missing partials, undefined shortcodes, unset config params, missing SCSS imports?
+
+5. Content rendering - does content render correctly? Are Hugo template functions producing expected output? Do markdown files with the changes display properly?
+
+6. Edge cases - empty content, very long titles, missing images, pages without certain frontmatter fields?
+
+## What to Report
+
+For each issue found:
+- Issue: clear description of what's wrong
+- Impact: how this prevents achieving the goal
+- Location: file and line reference
+- Fix: what needs to be added or changed
+
+Focus on correctness of approach, not code style.
+Report problems only - no positive observations.

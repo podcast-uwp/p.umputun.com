@@ -1,0 +1,48 @@
+Review Hugo site changes for correctness, security, and quality problems.
+
+## Template Correctness
+
+1. Hugo function usage - correct function signatures, proper piping, valid arguments
+2. Partial references - all {{ partial }} calls reference existing partial files
+3. Variable scope - variables defined and accessible in current context (.Page, .Site, .Params)
+4. Range/with blocks - proper use of context (.), correct iteration patterns
+5. Conditional logic - correct use of if/else/with/range, no unreachable branches
+6. Safe HTML output - proper use of safeHTML, safeCSS, safeJS where needed
+
+## Config and Data Correctness
+
+1. TOML syntax - valid config.toml, no syntax errors
+2. Required fields - all Hugo-required config fields present
+3. Menu definitions - menu items reference valid pages, correct weights
+4. Params consistency - site params used in templates actually defined in config
+
+## Content Integrity
+
+1. Frontmatter - valid YAML/TOML frontmatter in content files, required fields present
+2. Shortcodes - all shortcode calls reference defined shortcodes
+3. Image references - referenced images exist in static/ or content directories
+4. Internal links - links to other pages use valid paths
+
+## Security Analysis
+
+1. No secrets in templates or config - API keys, tokens, credentials
+2. Proper escaping - user-generated content properly escaped
+3. External resource integrity - CDN links use subresource integrity where appropriate
+
+## Simplicity Assessment
+
+1. Direct solutions first - if simple template logic works, don't use complex partials
+2. No unnecessary nesting - avoid deeply nested template blocks
+3. Question every partial - each partial should serve a clear purpose
+4. No scope creep - changes solve only the stated problem
+
+## What to Report
+
+For each issue:
+- Location: exact file path and line number
+- Issue: clear description
+- Impact: how this affects the site
+- Fix: specific suggestion
+
+Focus on defects that would cause build failures, broken rendering, or security issues.
+Report problems only - no positive observations.
