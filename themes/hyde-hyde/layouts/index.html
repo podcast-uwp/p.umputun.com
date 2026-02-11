@@ -23,10 +23,9 @@
         {{ if .Description }}
         {{ .Description }}
         {{ else }}
-        {{ .Summary }}
+        {{ .Summary | plainify }}
         {{ end }}
-        </span>
-        {{ if .Truncated }}
+        </span>{{ if .Truncated }}
           ... <a class="read-more-symbol" href="{{ .RelPermalink }}">➦</a>
         {{ end }}
         </div>
@@ -38,10 +37,6 @@
 
 
 {{ define "footer" }}
-  {{ if .Site.GoogleAnalytics }}
-    <!-- Google Analytics -->
-    {{ template "_internal/google_analytics_async.html" . }}
-  {{ end }}
   {{ partial "footer/font-awesome-js.html" . }}
   <script>
     var remark_config = {

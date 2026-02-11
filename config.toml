@@ -5,9 +5,8 @@ theme = "hyde-hyde"
 
 summarylength = 40
 enableEmoji = true
-paginate = 25
-
-GoogleAnalytics = "UA-20349923-1"
+[pagination]
+pagerSize = 25
 
 [params.social]
 gravatar = "umputun@gmail.com"
@@ -82,6 +81,3 @@ style = "monokai"
 tabWidth = 4
 [markup.goldmark.renderer]
 unsafe = true
-
-[author]
-name = "umputun"
