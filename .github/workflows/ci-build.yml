@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: build docker image
-        run: docker-compose build
+        run: docker compose build
 
       - name: hugo generate
-        run: docker-compose run --rm hugo_p
+        run: docker compose run --rm hugo_p
