@@ -2,4 +2,5 @@
 /.vscode/
 .hugo_build.lock
 /resources/
-.claude/
+.claude/*
+!.claude/skills/
