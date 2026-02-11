@@ -58,51 +58,49 @@ figure {
 	margin-top: 1rem;
 	margin-left: 0px;
 	margin-right: 0px;
-	//border-radius: 6px;
 	border-left: 6px solid;
 	border-right: 6px solid transparent;
 	border-right-width: 6px;
 	border-right-style: solid;
-	border-right-color: rgba(0, 0, 0, 0) transparent;
-	color: #7a7a7a;
+	border-right-color: transparent;
+	color: var(--color-text-secondary);
 }
 
 blockquote {
-	background-color: #fafafa;
-	border-left-color: #e6e6e6;
+	background-color: var(--color-quote-bg);
+	border-left-color: var(--color-quote-border);
 	@extend %quotebox;
 }
 
 .important {
-	background-color: #fbf8e8;
-	border-left-color: #fee450;
+	background-color: var(--color-important-bg);
+	border-left-color: var(--color-important-border);
 	@extend %quotebox;
 }
 
 .warning {
-	background-color: #f2dbdc;
-	border-left-color: #ae272f;
+	background-color: var(--color-warning-bg);
+	border-left-color: var(--color-warning-border);
 	@extend %quotebox;
 }
 
 kbd {
 	font-family: $root-font-family;
 	padding: 2px 7px;
-	border: 1px solid $gray-4;
+	border: 1px solid var(--color-kbd-border);
 	font-size: 0.8em;
 	line-height: 1.4;
-	background-color: #f3f3f3;
-	color: $gray-9;
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 2px $white inset;
+	background-color: var(--color-kbd-bg);
+	color: var(--color-text);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 2px var(--color-kbd-shadow) inset;
 	border-radius: 3px;
 	display: inline-block;
-	text-shadow: 0 1px 0 $white;
+	text-shadow: 0 1px 0 var(--color-kbd-shadow);
 	white-space: nowrap;
 }
 
 a {
-	//border-bottom: 1px dotted;
-	color: $link-color;
+	color: var(--color-link);
 	text-decoration: none;
 	word-wrap: break-word;
 
@@ -159,5 +157,5 @@ img[src$='#floatleft'] {
 }
 
 .comment_link {
-	color: #7a7a7a !important;
+	color: var(--color-text-secondary) !important;
 }

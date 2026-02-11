@@ -1,9 +1,10 @@
 <script>
   var remark_config = {
-    host: "https://remark42.umputun.com", 
+    host: "https://remark42.umputun.com",
     site_id: 'p.umputun.com',
     components: ['embed','counter'],
-    locale: 'ru'
+    locale: 'ru',
+    theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
   };
 
   (function(c) {

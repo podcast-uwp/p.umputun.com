@@ -19,7 +19,7 @@
 }
 
 .item__date {
-	color: $item__date-color;
+	color: var(--color-text-secondary);
 	display: block;
 	font-size: $item__date-font-size;
 	margin-bottom: .2rem;

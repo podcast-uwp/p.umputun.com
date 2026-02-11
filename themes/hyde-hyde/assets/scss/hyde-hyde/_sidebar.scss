@@ -1,21 +1,20 @@
 .sidebar {
   display: flex;
-  background-color: $sidebar-color;
-  color: rgb(255, 255, 255);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--color-sidebar-bg);
+  color: var(--color-sidebar-text-muted);
   padding: 2rem 1rem;
   text-align: center;
 
   a {
-    color: $gray-1;
+    color: var(--color-sidebar-text);
     border: none;
 
     &:hover {
-      color: $link-color;
+      color: var(--color-sidebar-hover);
     }
 
     &:focus {
-      color: $link-color;
+      color: var(--color-sidebar-hover);
     }
   }
 
@@ -33,10 +32,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  text-align: center;
 }
 
 .sidebar .copyright {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .sidebar-nav {

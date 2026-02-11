@@ -1,129 +1,140 @@
-.theme-base-00 {
-	.sidebar {
-		background-color: #3a3a3a;
-	}
+// light mode (default)
+:root {
+	--color-bg: #ffffff;
+	--color-bg-secondary: #f8fafc;
+	--color-text: #1e293b;
+	--color-text-secondary: #64748b;
+	--color-text-muted: #94a3b8;
+	--color-border: #e2e8f0;
+	--color-link: #b54a4a;
+	--color-link-hover: #943c3c;
+	--color-sidebar-bg: #1e293b;
+	--color-sidebar-text: #e2e8f0;
+	--color-sidebar-text-muted: #94a3b8;
+	--color-sidebar-hover: #f0a0a0;
+	--color-code-text: #ab5979;
+	--color-code-bg: #f1f5f9;
+	--color-tag-bg: #e2e8f0;
+	--color-tag-text: #475569;
+	--color-quote-bg: #f8fafc;
+	--color-quote-border: #e2e8f0;
+	--color-important-bg: #fbf8e8;
+	--color-important-border: #fee450;
+	--color-warning-bg: #f2dbdc;
+	--color-warning-border: #ae272f;
+	--color-kbd-bg: #f3f3f3;
+	--color-kbd-border: #cbd5e1;
+	--color-kbd-shadow: #ffffff;
+}
 
-	.sidebar a:hover {
-		color: #fc9696;
-	}
+// dark mode — warm dark (neutral grays, no blue tint)
+[data-theme="dark"] {
+	--color-bg: #222222;
+	--color-bg-secondary: #2a2a2a;
+	--color-text: #e0e0e0;
+	--color-text-secondary: #9e9e9e;
+	--color-text-muted: #6b6b6b;
+	--color-border: #3a3a3a;
+	--color-link: #e07070;
+	--color-link-hover: #f09090;
+	--color-sidebar-bg: #181818;
+	--color-sidebar-text: #e0e0e0;
+	--color-sidebar-text-muted: #6b6b6b;
+	--color-sidebar-hover: #f09090;
+	--color-code-text: #f472b6;
+	--color-code-bg: #2a2a2a;
+	--color-tag-bg: #3a3a3a;
+	--color-tag-text: #cccccc;
+	--color-quote-bg: #2a2a2a;
+	--color-quote-border: #3a3a3a;
+	--color-important-bg: #2d2a1e;
+	--color-important-border: #a3912e;
+	--color-warning-bg: #2d1b1b;
+	--color-warning-border: #ae272f;
+	--color-kbd-bg: #2a2a2a;
+	--color-kbd-border: #4a4a4a;
+	--color-kbd-shadow: #222222;
+}
 
-	.content a {
-		color: #ac4142;
-	}
-
-	.related-posts li a:hover {
-		color: #ac4142;
+// fallback for no-JS users
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--color-bg: #222222;
+		--color-bg-secondary: #2a2a2a;
+		--color-text: #e0e0e0;
+		--color-text-secondary: #9e9e9e;
+		--color-text-muted: #6b6b6b;
+		--color-border: #3a3a3a;
+		--color-link: #e07070;
+		--color-link-hover: #f09090;
+		--color-sidebar-bg: #181818;
+		--color-sidebar-text: #e0e0e0;
+		--color-sidebar-text-muted: #6b6b6b;
+		--color-sidebar-hover: #f09090;
+		--color-code-text: #f472b6;
+		--color-code-bg: #2a2a2a;
+		--color-tag-bg: #3a3a3a;
+		--color-tag-text: #cccccc;
+		--color-quote-bg: #2a2a2a;
+		--color-quote-border: #3a3a3a;
+		--color-important-bg: #2d2a1e;
+		--color-important-border: #a3912e;
+		--color-warning-bg: #2d1b1b;
+		--color-warning-border: #ae272f;
+		--color-kbd-bg: #2a2a2a;
+		--color-kbd-border: #4a4a4a;
+		--color-kbd-shadow: #222222;
 	}
 }
 
-.theme-base-08 {
-	.sidebar {
-		background-color: #ac4142;
+// theme toggle button
+.theme-toggle {
+	background: none;
+	border: none;
+	color: var(--color-sidebar-text-muted);
+	cursor: pointer;
+	padding: 4px;
+	display: inline-flex;
+	align-items: center;
+	transition: color 0.2s;
+
+	&:hover {
+		color: var(--color-sidebar-hover);
 	}
 
-	.content a {
-		color: #ac4142;
+	svg {
+		width: 22px;
+		height: 22px;
+		fill: currentColor;
 	}
 
-	.related-posts li a:hover {
-		color: #ac4142;
-	}
-}
-
-.theme-base-09 {
-	.sidebar {
-		background-color: #d28445;
+	.icon-sun {
+		display: none;
 	}
 
-	.content a {
-		color: #d28445;
-	}
-
-	.related-posts li a:hover {
-		color: #d28445;
-	}
-}
-
-.theme-base-0a {
-	.sidebar {
-		background-color: #f4bf75;
-	}
-
-	.content a {
-		color: #f4bf75;
-	}
-
-	.related-posts li a:hover {
-		color: #f4bf75;
+	.icon-moon {
+		display: inline;
 	}
 }
 
-.theme-base-0b {
-	.sidebar {
-		background-color: #90a959;
+[data-theme="dark"] .theme-toggle {
+	.icon-sun {
+		display: inline;
 	}
 
-	.content a {
-		color: #90a959;
-	}
-
-	.related-posts li a:hover {
-		color: #90a959;
+	.icon-moon {
+		display: none;
 	}
 }
 
-.theme-base-0c {
-	.sidebar {
-		background-color: #75b5aa;
-	}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .theme-toggle {
+		.icon-sun {
+			display: inline;
+		}
 
-	.content a {
-		color: #75b5aa;
-	}
-
-	.related-posts li a:hover {
-		color: #75b5aa;
-	}
-}
-
-.theme-base-0d {
-	.sidebar {
-		background-color: #6a9fb5;
-	}
-
-	.content a {
-		color: #6a9fb5;
-	}
-
-	.related-posts li a:hover {
-		color: #6a9fb5;
-	}
-}
-
-.theme-base-0e {
-	.sidebar {
-		background-color: #aa759f;
-	}
-
-	.content a {
-		color: #aa759f;
-	}
-
-	.related-posts li a:hover {
-		color: #aa759f;
-	}
-}
-
-.theme-base-0f {
-	.sidebar {
-		background-color: #8f5536;
-	}
-
-	.content a {
-		color: #8f5536;
-	}
-
-	.related-posts li a:hover {
-		color: #8f5536;
+		.icon-moon {
+			display: none;
+		}
 	}
 }

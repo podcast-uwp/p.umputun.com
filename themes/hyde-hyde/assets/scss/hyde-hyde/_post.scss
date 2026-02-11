@@ -9,7 +9,7 @@
 
 .post__meta {
   font-size: $meta-font-size;
-  color: $meta-color;
+  color: var(--color-text-secondary);
   font-weight: $meta-font-weight;
 }
 
@@ -26,43 +26,16 @@
 }
 
 .post__tag {
-  background: $tag-background-color;
+  background: var(--color-tag-bg);
   border-radius: 2px;
-  color: $tag-color;
+  color: var(--color-tag-text);
   font-size: $tag-font-size;
   font-weight: bold;
   padding: 2px 6px;
 }
 
 .post__title {
-  background-image: -webkit-linear-gradient(
-    left,
-    $gradient-color-1,
-    $gradient-color-2
-  ); /* For Chrome and Safari */
-  background-image: -moz-linear-gradient(
-    left,
-    $gradient-color-1,
-    $gradient-color-2
-  ); /* For old Fx (3.6 to 15) */
-  background-image: -ms-linear-gradient(
-    left,
-    $gradient-color-1,
-    $gradient-color-2
-  ); /* For pre-releases of IE 10*/
-  background-image: -o-linear-gradient(
-    left,
-    $gradient-color-1,
-    $gradient-color-2
-  ); /* For old Opera (11.1 to 12.0) */
-  background-image: linear-gradient(
-    to right,
-    $gradient-color-1,
-    $gradient-color-2
-  ); /* Standard syntax; must be last */
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--color-text);
 }
 
 .post__subtitle {

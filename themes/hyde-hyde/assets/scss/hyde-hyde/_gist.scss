@@ -8,7 +8,7 @@ body .gist {
 	.gist-data {
 		border-bottom: none;
 		border-radius: 0;
-		background-color: $gray-3;
+		background-color: var(--color-bg-secondary);
 	}
 	.blob-wrapper {
 		border-radius: 0;
@@ -45,7 +45,7 @@ body .gist {
 */
 body .gist {
 	.gist-data {
-		background-color: $gray-0;
+		background-color: var(--color-bg-secondary);
 	}
 	.highlight {
 		background-color: transparent;
