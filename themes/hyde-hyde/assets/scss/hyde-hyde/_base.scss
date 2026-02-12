@@ -149,6 +149,9 @@ a {
 img[src$='#floatright'] {
 	float: right;
 	margin-left: 1rem;
+}
+
+img[src*='ralphex-logo'][src$='#floatright'] {
 	shape-outside: circle(50%);
 }
 
