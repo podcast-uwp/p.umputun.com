@@ -3,8 +3,8 @@
 {{ end }}
 
 {{ define "content" }}
-<h1>404: Page not found</h1>
-<p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ .Site.BaseURL }}">Head back home</a> to try finding it again.</p>
+<h1>{{ i18n "notFound" }}</h1>
+<p class="lead">{{ i18n "notFoundMessage" }} <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "headHome" }}</a></p>
 {{ end }}
 
 {{ define "footer" }}

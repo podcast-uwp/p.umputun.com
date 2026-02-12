@@ -1,0 +1,3 @@
+# redirect old /ru/ URLs to root (Russian is now served at root)
+/ru/ / 301
+/ru/* /:splat 301

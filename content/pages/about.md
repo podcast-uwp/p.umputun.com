@@ -1,7 +1,7 @@
 ---
 title: "Кто Я Такой"
 draft: false
-url: /about
+slug: about
 date: 2002-01-01T14:20:40-05:00
 ---
 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>404</title>
+<script>
+  var lang = window.location.pathname.startsWith('/en/') ? 'en' : '';
+  window.location.replace('/' + lang + (lang ? '/' : '') + '404.html');
+</script>
+</head>
+<body>
+<p><a href="/404.html">Page not found</a></p>
+</body>
+</html>

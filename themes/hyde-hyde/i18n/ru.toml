@@ -1,0 +1,20 @@
+[minutes]
+other = "мин."
+
+[relatedArticles]
+other = "Похожие статьи"
+
+[tableOfContents]
+other = "Оглавление"
+
+[comments]
+other = "Комментарии"
+
+[notFound]
+other = "404: Страница не найдена"
+
+[notFoundMessage]
+other = "Извините, такой страницы не существует."
+
+[headHome]
+other = "На главную"

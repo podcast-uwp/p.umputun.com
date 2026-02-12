@@ -1,7 +1,7 @@
 baseURL = "https://p.umputun.com/"
-languageCode = "ru-ru"
-title = "Umputun тут был"
 theme = "hyde-hyde"
+defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = false
 
 summarylength = 40
 enableEmoji = true
@@ -15,53 +15,18 @@ twitter = "umputun"
 telegram = "umputun"
 email = "umputun@gmail.com"
 
-[params.meta]
-keywords = "Umputun, Умпутун, blog umputun, блог умпутуна"
-description = "заметки на разные темы"
-longDescription = "Заметки на разные темы от Umputun. Старший брат моего твиттера."
-
 [params]
 author = "Umputun"
-description = "заметки на разные темы"
-longDescription = "Заметки на разные темы от Umputun. Старший брат моего твиттера."
 authorimage = "/images/p-240.png"
 copyright = "umputun"
 license = "CC BY-SA 4.0"
-licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
 postNavigation = false
-
 Remark42 = true
-dateformat = "2006-02-01"
+mainSections = ["posts"]
 
 [permalinks]
 posts = "/:year/:month/:day/:slug"
-
-[menu]
-
-[[menu.main]]
-name = " Домой"
-identifier = "home"
-url = "/"
-
-[[menu.main]]
-name = "Еженедельный подкаст от Umputun"
-identifier = "podcast_umputun"
-url = "https://podcast.umputun.com/"
-
-[[menu.main]]
-name = "Подкаст Радио-Т"
-identifier = "podcast_radiot"
-url = "https://radio-t.com/"
-
-[[menu.main]]
-name = "Канал на YouTube"
-identifier = "youtube"
-url = "https://www.youtube.com/c/UmputunU/videos"
-
-[[menu.main]]
-name = "Помочь на patreon"
-identifier = "patreon"
-url = "https://www.patreon.com/user?u=2577215"
+pages = "/:slug"
 
 [taxonomies]
 tag = "tags"
@@ -80,3 +45,107 @@ style = "monokai"
 tabWidth = 4
 [markup.goldmark.renderer]
 unsafe = true
+
+# --- Languages ---
+
+[languages.ru]
+languageName = "Русский"
+weight = 1
+title = "Umputun тут был"
+languageCode = "ru-ru"
+
+[languages.ru.params]
+description = "заметки на разные темы"
+dateformat = "2006-01-02"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
+
+[languages.ru.params.meta]
+description = "заметки на разные темы"
+keywords = "Umputun, Умпутун, blog umputun, блог умпутуна"
+
+[[languages.ru.menu.main]]
+name = " Домой"
+identifier = "home"
+pageRef = "/"
+weight = 1
+
+[[languages.ru.menu.main]]
+name = "Еженедельный подкаст от Umputun"
+identifier = "podcast_umputun"
+url = "https://podcast.umputun.com/"
+weight = 2
+
+[[languages.ru.menu.main]]
+name = "Подкаст Радио-Т"
+identifier = "podcast_radiot"
+url = "https://radio-t.com/"
+weight = 3
+
+[[languages.ru.menu.main]]
+name = "Канал на YouTube"
+identifier = "youtube"
+url = "https://www.youtube.com/c/UmputunU/videos"
+weight = 4
+
+[[languages.ru.menu.main]]
+name = "Проекты Umputun"
+identifier = "umputun_dev"
+url = "https://umputun.dev/"
+weight = 5
+
+[[languages.ru.menu.main]]
+name = "Помочь на patreon"
+identifier = "patreon"
+url = "https://www.patreon.com/user?u=2577215"
+weight = 6
+
+[languages.en]
+languageName = "English"
+weight = 2
+title = "Umputun was here"
+languageCode = "en-us"
+
+[languages.en.params]
+description = "notes on various topics"
+dateformat = "Jan 02, 2006"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/"
+
+[languages.en.params.meta]
+description = "notes on various topics"
+keywords = "Umputun, blog umputun, personal blog, tech notes"
+
+[[languages.en.menu.main]]
+name = " Home"
+identifier = "home"
+pageRef = "/"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Weekly Podcast by Umputun"
+identifier = "podcast_umputun"
+url = "https://podcast.umputun.com/"
+weight = 2
+
+[[languages.en.menu.main]]
+name = "Radio-T Podcast"
+identifier = "podcast_radiot"
+url = "https://radio-t.com/"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "YouTube Channel"
+identifier = "youtube"
+url = "https://www.youtube.com/c/UmputunU/videos"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Umputun's Development Projects"
+identifier = "umputun_dev"
+url = "https://umputun.dev/"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Support on Patreon"
+identifier = "patreon"
+url = "https://www.patreon.com/user?u=2577215"
+weight = 6
