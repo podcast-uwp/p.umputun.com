@@ -41,6 +41,27 @@
   text-align: center;
 }
 
+.lang-switcher {
+  margin-bottom: 0.5rem;
+
+  .lang-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--color-sidebar-text-muted);
+    border-radius: 4px;
+    color: var(--color-sidebar-text-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-sidebar-hover);
+      border-color: var(--color-sidebar-hover);
+    }
+  }
+}
+
 .sidebar .copyright {
   margin-top: 0;
 }

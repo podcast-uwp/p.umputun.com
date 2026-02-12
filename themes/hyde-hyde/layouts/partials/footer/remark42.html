@@ -3,7 +3,8 @@
     host: "https://remark42.umputun.com",
     site_id: 'p.umputun.com',
     components: ['embed','counter'],
-    locale: 'ru',
+    locale: '{{ .Site.Language.Lang }}',
+    url: '{{ .Permalink | replaceRE "(https://p\\.umputun\\.com)/en/" "$1/" }}',
     theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
   };
 

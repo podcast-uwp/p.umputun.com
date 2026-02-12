@@ -1,0 +1,20 @@
+[minutes]
+other = "min"
+
+[relatedArticles]
+other = "Related Articles"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[comments]
+other = "Comments"
+
+[notFound]
+other = "404: Page not found"
+
+[notFoundMessage]
+other = "Sorry, we've misplaced that URL or it's pointing to something that doesn't exist."
+
+[headHome]
+other = "Head back home"

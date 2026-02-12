@@ -16,7 +16,7 @@
           <a href="{{ .RelPermalink }}" {{if .Scratch.Get "draftPage" }}class="draft"{{end}}>{{ .Title }}</a>
         </span>
         <span class="item__date">
-          {{ .Date.Format (.Site.Params.dateformat | default "Jan 02, 2006") }} | <a class="comment_link" href="{{ .Permalink }}#remark42"> Комментарии: <span class="remark42__counter" data-url="{{ .Permalink }}"></span></a>
+          {{ .Date.Format (.Site.Params.dateformat | default "Jan 02, 2006") }} | <a class="comment_link" href="{{ .Permalink }}#remark42"> {{ i18n "comments" }}: <span class="remark42__counter" data-url="{{ .Permalink | replaceRE "(https://p\\.umputun\\.com)/(ru|en)/" "$1/" }}"></span></a>
         </span>
 
         <span {{if .Scratch.Get "draftPage" }}class="draft"{{end}}>
@@ -41,7 +41,7 @@
   <script>
     var remark_config = {
       site_id: 'p.umputun.com',
-      locale: 'ru',
+      locale: '{{ .Site.Language.Lang }}',
     };
     (function() {
       var d = document, s = d.createElement('script');
