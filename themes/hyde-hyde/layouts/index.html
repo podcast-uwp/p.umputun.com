@@ -23,7 +23,7 @@
         {{ if .Description }}
         {{ .Description }}
         {{ else }}
-        {{ .Summary | plainify }}
+        {{ .Summary | plainify | htmlUnescape }}
         {{ end }}
         </span>{{ if .Truncated }}
           ... <a class="read-more-symbol" href="{{ .RelPermalink }}">➦</a>
