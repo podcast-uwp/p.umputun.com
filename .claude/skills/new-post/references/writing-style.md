@@ -118,6 +118,12 @@ Tags distribution: "для гиков" (~45%), "разное" (~31%), "наза�
 - "не бахвальства ради, но прояснения для" — preemptive modesty
 - italic postscript `_P.S. ..._ ` — personal reflection closing
 
+### Sentence structure
+- **Avoid short, choppy sentences** — prefer longer, connected sentences with commas, conjunctions ("и", "но", "а", "хотя"), and subordinate clauses. Extend thoughts instead of breaking them into separate fragments
+- **Use dashes sparingly** — em-dashes (—) only for genuine parenthetical inserts or strong contrasts. Do not chain multiple dashes in one paragraph. Replace excess dashes with commas, semicolons, or conjunctions
+- **Build flowing paragraphs** — a paragraph should develop one idea across several connected sentences, not be a list of short standalone statements
+- **Continue the thought** — instead of ending a sentence and starting a new short one, extend with ", и...", ", но...", ", а..." or other connectors
+
 ### What NOT to do
 - No "dear readers" or meta-talk about the blog itself
 - No clickbait titles or artificial cliffhangers
@@ -126,3 +132,5 @@ Tags distribution: "для гиков" (~45%), "разное" (~31%), "наза�
 - No English words when a Russian equivalent exists (exception: technical terms without good Russian translations)
 - No "мы" when referring to personal work — always "я"
 - Section headers are lowercase (not title case, not uppercase)
+- No choppy, staccato writing — avoid sequences of 3+ short sentences in a row
+- No overuse of em-dashes — maximum 2 per paragraph, prefer commas and conjunctions
