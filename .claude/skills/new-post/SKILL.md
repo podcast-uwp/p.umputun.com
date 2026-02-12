@@ -173,10 +173,11 @@ The draft post will be visible at `http://localhost:1313/`. If agent-browser is 
 
 **Publish:**
 1. Set `draft: false` in frontmatter
-2. Remind the user to commit:
+2. **Generate English translation** using the `translate-post` skill — run `/translate-post <filename>` to create the `.en.md` version
+3. Remind the user to commit:
    ```
-   The post is ready. When you're satisfied, commit and push to master —
-   Cloudflare Pages will deploy automatically.
+   The post and its English translation are ready. When you're satisfied,
+   commit and push to master — Cloudflare Pages will deploy automatically.
    ```
 
 ## Working with Existing Drafts

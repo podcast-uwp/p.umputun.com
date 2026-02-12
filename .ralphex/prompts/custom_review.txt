@@ -1,0 +1,43 @@
+# custom review prompt
+# this prompt is sent to a custom external review tool (script)
+# the script receives this as a file and should run the code review
+#
+# available variables:
+#   {{DIFF_INSTRUCTION}} - git diff command appropriate for current iteration
+#   {{GOAL}} - human-readable goal description
+#   {{PLAN_FILE}} - path to the plan file being executed
+#   {{DEFAULT_BRANCH}} - default branch name (main, master, trunk, etc.)
+
+You are reviewing code changes for: {{GOAL}}
+
+## Get the Diff
+
+Run this command to see the changes:
+{{DIFF_INSTRUCTION}}
+
+## Review Focus
+
+Analyze the code for:
+
+1. Template errors - broken partial references, undefined variables, incorrect Hugo function usage
+2. Config issues - invalid TOML syntax, missing required fields, deprecated settings
+3. Content problems - broken frontmatter, invalid dates, missing required fields
+4. Asset issues - broken image paths, missing SCSS imports, invalid CSS
+5. Security - secret exposure in templates or config, improper escaping of user content
+6. Broken references - links to non-existent pages, missing partials, undefined shortcodes
+
+## Output Format
+
+Report issues as a structured list:
+
+- file:line - description of issue
+- file:line - description of issue
+
+If no issues found, output: NO ISSUES FOUND
+
+## Important
+
+- Focus on real problems, not style preferences
+- Check if issues are already mitigated in the code
+- Only report issues you can verify by reading the actual code
+- Be specific about file paths and line numbers

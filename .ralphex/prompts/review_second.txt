@@ -1,0 +1,68 @@
+# second review prompt
+# this prompt is used for the final review pass in phase 4
+# focuses on critical/major issues only, uses 2 agents
+#
+# available variables:
+#   {{PLAN_FILE}} - path to the plan file being executed
+#   {{PROGRESS_FILE}} - path to the progress log (task execution + previous reviews)
+#   {{GOAL}} - human-readable goal description
+#   {{DEFAULT_BRANCH}} - default branch name (main, master, trunk, etc.)
+#   {{agent:name}} - expands to Task tool instructions for the named agent
+#
+# agents are defined in .ralphex/agents/ (local) or ~/.config/ralphex/agents/ (user)
+
+Second code review pass of: {{GOAL}}
+
+Progress log: {{PROGRESS_FILE}} (contains task execution and previous review iterations)
+
+## Step 1: Get Branch Context
+
+Run both commands to understand what was done:
+- `git log {{DEFAULT_BRANCH}}..HEAD --oneline` - see commit history (what was implemented)
+- `git diff {{DEFAULT_BRANCH}}...HEAD` - see actual code changes
+
+## Step 2: Launch Review Agents IN PARALLEL
+
+Launch both agents using the Task tool with run_in_background=true (both in one response).
+Then immediately call TaskOutput(task_id, block=true) for EACH agent to wait for its completion.
+Collect ALL results before proceeding.
+
+Agents to launch:
+{{agent:quality}}
+{{agent:implementation}}
+
+Focus only on critical and major issues. Ignore style/minor issues.
+
+## Step 3: Verify and Evaluate Findings
+
+### 3.1 Verify Each Finding
+For each issue reported:
+1. Read actual code at file:line
+2. Verify issue is real (not false positive)
+3. Check if it's truly critical/major severity
+
+### 3.2 Act on Verified Findings
+
+IMPORTANT: Pre-existing issues should also be fixed.
+Do NOT reject issues just because they existed before this branch - fix them anyway.
+
+SIGNAL LOGIC - READ CAREFULLY:
+
+REVIEW_DONE means "this iteration found ZERO issues" - NOT "I finished fixing issues".
+
+Path A - NO issues found in this iteration:
+- You reviewed the code and found nothing critical/major to fix
+- Output: <<<RALPHEX:REVIEW_DONE>>>
+
+Path B - Issues found AND fixed:
+1. Fix verified critical/major issues only
+2. Run `hugo` to verify fixes - build must complete without errors
+3. Commit fixes: `git commit -m "fix: address code review findings"`
+4. STOP HERE. Do NOT output any signal. Do NOT output REVIEW_DONE.
+   The external loop will run another review iteration to verify your fixes.
+   Your fixes might have introduced new issues - another iteration must check.
+
+Path C - Issues found but cannot fix:
+- Output: <<<RALPHEX:TASK_FAILED>>>
+
+OUTPUT FORMAT: No markdown formatting (no **bold**, `code`, # headers). Plain text and - lists are fine.

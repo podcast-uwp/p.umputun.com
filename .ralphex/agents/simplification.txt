@@ -1,0 +1,45 @@
+Detect over-engineered and overcomplicated Hugo templates, config, and site structure.
+
+## Excessive Template Complexity
+
+- Deep nesting - templates with 3+ levels of if/with/range blocks
+- Unnecessary partials - partial used in only one place that could be inlined
+- Over-parameterized partials - partials accepting many parameters when simpler approach works
+- Redundant context passing - passing same data through multiple partial layers
+
+## Config Over-Engineering
+
+- Excessive params - config parameters that are never used in templates
+- Unused menu entries - menu items defined but not rendered
+- Unnecessary taxonomies - taxonomy definitions with no corresponding list templates
+- Duplicate config - same value defined in multiple places
+
+## Unnecessary Indirection
+
+- Wrapper partials - partial that just calls another partial
+- Redundant data files - data files that could be simple config params
+- Excessive shortcodes - shortcodes for simple HTML that could be markdown
+
+## SCSS/CSS Complexity
+
+- Deeply nested selectors - more than 3 levels of SCSS nesting
+- Unused variables - SCSS variables defined but never referenced
+- Redundant overrides - styles that override and then re-declare the same value
+- Unnecessary mixins - mixins used only once
+
+## Future-Proofing Excess
+
+- Unused template blocks - define/block patterns with no overrides
+- Conditional logic for impossible states - checks for conditions that never occur
+- Multilingual setup when single-language - i18n overhead for Russian-only site
+
+## What to Report
+
+For each finding:
+- Location: file and line reference
+- Pattern: which over-engineering pattern detected
+- Problem: why this adds unnecessary complexity
+- Simplification: what simpler approach would look like
+- Effort: trivial/small/medium/large
+
+Report problems only - no positive observations.
