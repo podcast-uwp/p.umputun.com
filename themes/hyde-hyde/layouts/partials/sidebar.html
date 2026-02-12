@@ -33,13 +33,22 @@
     </div>
     <div class="sidebar-bottom">
       <div class="lang-switcher">
-        {{- range .Site.Languages }}
-          {{- if ne .Lang $.Site.Language.Lang }}
-            {{- if eq .Lang "ru" }}
-            <a href="/" class="lang-link">{{ upper .Lang }}</a>
-            {{- else }}
-            <a href="/{{ .Lang }}/" class="lang-link">{{ upper .Lang }}</a>
+        {{- range $lang := .Site.Languages }}
+          {{- if ne $lang.Lang $.Site.Language.Lang }}
+            {{- $targetURL := "" }}
+            {{- range $.Page.Translations }}
+              {{- if eq .Lang $lang.Lang }}
+                {{- $targetURL = .RelPermalink }}
+              {{- end }}
             {{- end }}
+            {{- if not $targetURL }}
+              {{- if eq $lang.Lang "ru" }}
+                {{- $targetURL = "/" }}
+              {{- else }}
+                {{- $targetURL = (printf "/%s/" $lang.Lang) }}
+              {{- end }}
+            {{- end }}
+            <a href="{{ $targetURL }}" class="lang-link">{{ upper $lang.Lang }}</a>
           {{- end }}
         {{- end }}
       </div>

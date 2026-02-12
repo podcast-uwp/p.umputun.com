@@ -88,10 +88,16 @@ url = "https://www.youtube.com/c/UmputunU/videos"
 weight = 4
 
 [[languages.ru.menu.main]]
+name = "Проекты Umputun"
+identifier = "umputun_dev"
+url = "https://umputun.dev/"
+weight = 5
+
+[[languages.ru.menu.main]]
 name = "Помочь на patreon"
 identifier = "patreon"
 url = "https://www.patreon.com/user?u=2577215"
-weight = 5
+weight = 6
 
 [languages.en]
 languageName = "English"
@@ -133,7 +139,13 @@ url = "https://www.youtube.com/c/UmputunU/videos"
 weight = 4
 
 [[languages.en.menu.main]]
+name = "Umputun's Development Projects"
+identifier = "umputun_dev"
+url = "https://umputun.dev/"
+weight = 5
+
+[[languages.en.menu.main]]
 name = "Support on Patreon"
 identifier = "patreon"
 url = "https://www.patreon.com/user?u=2577215"
-weight = 5
+weight = 6
