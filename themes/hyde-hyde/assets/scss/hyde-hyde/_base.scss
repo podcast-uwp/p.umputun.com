@@ -152,8 +152,10 @@ img[src$='#floatright'] {
 }
 
 img[src*='ralphex-logo'][src$='#floatright'] {
-	max-width: 150px;
+	width: 350px;
+	height: 350px;
 	shape-outside: circle(50%);
+	shape-margin: 0.5rem;
 }
 
 img[src$='#floatleft'] {
