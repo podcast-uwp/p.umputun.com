@@ -152,6 +152,7 @@ img[src$='#floatright'] {
 }
 
 img[src*='ralphex-logo'][src$='#floatright'] {
+	max-width: 150px;
 	shape-outside: circle(50%);
 }
 

@@ -105,6 +105,7 @@ Pitfalls discovered when upgrading from Hugo 0.73.0 to modern versions:
 - `.Site.DisqusShortname` removed — check `.Site.Params` instead
 - `.Summary` in modern Hugo returns HTML — use `| plainify` for plain text output
 - `_internal/google_analytics_async.html` template removed
+- Hugo markdown produces `<img>` without `width`/`height` — floated images with `shape-outside` need explicit `max-width` in CSS to prevent layout race conditions (text overlaps on first load, works on cached refresh)
 
 ## Notes
 
